@@ -10,3 +10,5 @@ navsBtn.forEach(e =>{
         e.classList.add('active');
     })
 })
+
+new GitHubCalendar(".calendar", "abdallah-sala7");

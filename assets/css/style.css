@@ -146,7 +146,7 @@ nav ul li.active a{
 
 /******************** start about section **************** */
 
-.about-info{}
+.about-info > div{margin-bottom: 5em;}
 
 .about-info h3{
     font-size: 2rem;
@@ -157,10 +157,10 @@ nav ul li.active a{
     width: fit-content;
     padding-bottom: 0.5rem;
 
-    border-bottom: 0.5rem solid;
+    border-bottom: 2px solid;
     border-image-source: linear-gradient(43deg, #7158D0 0%, #c850d0 46%, #ffcc70 100%);
-    border-image-slice: 0.5;
-    border-image-width: 0.5;
+    border-image-slice: 1;
+    border-image-width: 1;
 }
 
 .about-info .personal-info{
@@ -189,10 +189,16 @@ nav ul li.active a{
 .about-info .personal-skils{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    flex-wrap: wrap;
 }
 
+.about-info .personal-skils ul{width: 190px;}
+.about-info .personal-skils ul li{
+    margin-bottom: 1em;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: capitalize;
+}
 
 
 
