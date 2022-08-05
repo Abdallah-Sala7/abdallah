@@ -39,11 +39,6 @@ rect.ContributionCalendar-day[data-level='4'] {
     overflow-x: auto;
 }
 
-.js-calendar-graph-svg{
-    max-width: 100%;
-
-}
-
 .contrib-legend .legend li {
     display: inline-block;
     width: 10px;
