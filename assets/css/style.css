@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+    font-weight: 500;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    scroll-behavior: smooth;
+}
+
+::selection{background: #c850d021; color: #ffcc70;}
+::-moz-selection{background: #c850d021; color: #ffcc70;}
+::-webkit-selection{background: #c850d021; color: #ffcc70;}
+
+ul{list-style: none}
+a{text-decoration: none}
+
+section{
+    padding: 5rem 0;
+}
+
+section h2{
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    background-image: linear-gradient(180deg,  #c850d0 5%, #ffcc70 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/************** start navbar ************/
+nav{
+    width: 40%;
+    height: 60px;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c850d030;
+    border-radius: 100px;
+    box-shadow: 1px 1px 26px #302b63;
+    backdrop-filter: blur(3px);
+    z-index: 111;
+}
+
+nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+}
+
+nav ul li{
+    transition: 0.3s transform ease-in-out;
+    padding: 0.5rem 0.7rem;
+    border-radius: 50%;
+}
+
+nav ul li.active{
+    background-color: #c850d030;
+    box-shadow: inset 0px 0px 17px 0px #386b7482;
+    transform: translateY(-20px);
+}
+
+nav ul li a{
+    font-size: 2.1rem;
+    color: #5f5b89;
+    cursor: pointer;
+    transition: .3s color ease-in-out;
+}
+
+nav ul li:hover a,
+nav ul li.active a{
+    color: #fff;
+}
+
+
+/************** start landing page ************/
+
+.landing_page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.landing_page .landing_img{
+    width: 30%;
+}
+
+.landing_page .landing_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: content;
+}
+
+.landing_page .landing_info p{
+    line-height: 1.7;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.07rem;
+    text-transform: capitalize;
+}
+
+.landing_page .landing_info p span{
+    font-size: 3rem;
+    display: block;
+} 
+
+.landing_page .landing_info p .dev-name{
+    display: inline;
+    font-weight: 900;
+    background-image: linear-gradient(43deg, #7158D0 0%, #c850d0 46%, #ffcc70 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/******************** start about section **************** */
+
+.about-info{}
+
+.about-info h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.07rem;
+    width: fit-content;
+    padding-bottom: 0.5rem;
+
+    border-bottom: 0.5rem solid;
+    border-image-source: linear-gradient(43deg, #7158D0 0%, #c850d0 46%, #ffcc70 100%);
+    border-image-slice: 0.5;
+    border-image-width: 0.5;
+}
+
+.about-info .personal-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 5rem;
+}
+
+.about-info .personal-info p{
+    width: 50%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2em;
+    letter-spacing: 0.025rem;
+    text-transform: capitalize;
+}
+
+.about-info .personal-info img{
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
+.about-info .personal-skils{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container{max-width: 540px; margin: auto;}
+    
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container{max-width: 720px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container{max-width: 960px;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .container{max-width: 1140px;}
+}
