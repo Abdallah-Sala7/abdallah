@@ -36,10 +36,6 @@ body{
 ul{list-style: none}
 a{text-decoration: none}
 
-section{
-    padding: 5rem 0;
-}
-
 section h2{
     font-size: 4rem;
     font-weight: 900;
@@ -128,12 +124,15 @@ nav ul li.active a{
     font-weight: 700;
     letter-spacing: 0.07rem;
     text-transform: capitalize;
+    margin-bottom: 3rem;
 }
 
 .landing_page .landing_info p span{
     font-size: 3rem;
     display: block;
 } 
+
+.landing_page .landing_info p .span-skils{min-height: 82px;}
 
 .landing_page .landing_info p .dev-name{
     display: inline;
@@ -144,7 +143,22 @@ nav ul li.active a{
     color: transparent;
 }
 
-/******************** start about section **************** */
+.landing_page .landing_info .download-cv{
+    border-radius: 120px;
+    background-color: #c850d0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: inset -250px 0px 0px #7158D0, 0px 0px 0px #c850d049;
+    transition: .3s box-shadow ease-in-out;
+}
+.landing_page .landing_info .download-cv:hover{
+    box-shadow: inset 0px 0px 0px #7158D0, 0px 0px 20px #c850d049;
+}
+
+/******************** start about 2section **************** */
 
 .about-info > div{margin-bottom: 5em;}
 
@@ -200,8 +214,30 @@ nav ul li.active a{
     text-transform: capitalize;
 }
 
+.about-info .git-contributions img{width: 100%; margin-bottom: 0.7em; object-fit: contain;}
+.about-info .git-contributions p{text-align: center;}
 
+/*********************** start portfolio section *************/
+.projects-info{
+    display: grid;
+    grid-template-columns: repeat( 3,1fr);
+    gap: 1em;
+}
+.project-item{
+    height: 250px;
+}
 
+.project-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: 1.5s object-position linear;
+}
+
+.project-item:hover img{
+    object-position: bottom;
+}
 
 
 /* Small devices (landscape phones, 576px and up) */
