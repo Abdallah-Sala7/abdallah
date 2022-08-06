@@ -59,3 +59,25 @@ function loop () {
 }
 
 loop()
+
+
+// filter projects
+const filterBtn = document.querySelectorAll('.filter-btn button');
+const projects = document.querySelectorAll('.project-item');
+
+filterBtn.forEach(e=>{
+    e.addEventListener('click', ()=>{
+        filterBtn.forEach(e=>{
+            e.classList.remove('active');
+        })
+        e.classList.add('active');
+
+        let filter = e.dataset.filter;
+        projects.forEach(e=>{
+            e.classList.remove('hide');
+            if(!e.classList.contains(filter) && filter != 'all'){
+                e.classList.add('hide');
+            }
+        })
+    })
+})
