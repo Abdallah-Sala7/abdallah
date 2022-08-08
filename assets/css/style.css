@@ -25,7 +25,11 @@
 body{
     font-family: 'roboto', sans-serif;
     color: #fff;
+}
+
+main{
     background-image: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    padding-bottom: 6em;
     scroll-behavior: smooth;
 }
 
@@ -34,7 +38,7 @@ body{
 ::-webkit-selection{background: #c850d021; color: #ffcc70;}
 
 ul{list-style: none}
-a{text-decoration: none}
+a{text-decoration: none; color: inherit;}
 button{outline: none; border: none; cursor: pointer}
 section h2{
     font-size: 4rem;
@@ -75,8 +79,12 @@ nav ul{
 
 nav ul li{
     transition: 0.3s transform ease-in-out;
-    padding: 0.5rem 0.7rem;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li.active{
@@ -86,15 +94,23 @@ nav ul li.active{
 }
 
 nav ul li a{
-    font-size: 2.1rem;
-    color: #5f5b89;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
     cursor: pointer;
-    transition: .3s color ease-in-out;
+} 
+
+nav ul li a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(46%) sepia(65%) saturate(1291%) hue-rotate(268deg) brightness(85%) contrast(90%);
+    transition: 0.3s filter ease-in-out;
 }
 
-nav ul li:hover a,
-nav ul li.active a{
-    color: #fff;
+nav ul li:hover img,
+nav ul li.active img{
+    filter: invert(100%) sepia(96%) saturate(18%) hue-rotate(216deg) brightness(103%) contrast(104%);
 }
 
 
@@ -118,7 +134,7 @@ nav ul li.active a{
     object-fit: content;
 }
 
-.landing_page .landing_info p{
+.landing_page .landing_info h1{
     line-height: 1.7;
     font-size: 2.5rem;
     font-weight: 700;
@@ -127,14 +143,14 @@ nav ul li.active a{
     margin-bottom: 3rem;
 }
 
-.landing_page .landing_info p span{
+.landing_page .landing_info h1 span{
     font-size: 3rem;
     display: block;
 } 
 
-.landing_page .landing_info p .span-skils{min-height: 82px;}
+.landing_page .landing_info h1 .span-skils{min-height: 82px;}
 
-.landing_page .landing_info p .dev-name{
+.landing_page .landing_info h1 .dev-name{
     display: inline;
     font-weight: 900;
     background-image: linear-gradient(43deg, #7158D0 0%, #c850d0 46%, #ffcc70 100%);
@@ -144,18 +160,31 @@ nav ul li.active a{
 }
 
 .landing_page .landing_info .download-cv{
-    border-radius: 120px;
-    background-color: #c850d0;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
     font-size: 1.5rem;
     font-weight: 700;
+    background-color: #c850d0;
     color: #fff;
+    border-radius: 120px;
     overflow: hidden;
-    box-shadow: inset -250px 0px 0px #7158D0, 0px 0px 0px #c850d049;
+    box-shadow: inset -300px 0px 0px #7158D0, 0px 0px 0px #c850d049;
     transition: .3s box-shadow ease-in-out;
 }
+
 .landing_page .landing_info .download-cv:hover{
     box-shadow: inset 0px 0px 0px #7158D0, 0px 0px 20px #c850d049;
+}
+
+.landing_page .landing_info .download-cv img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: 0.3s filter ease-in-out;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(52deg) brightness(105%) contrast(101%);
 }
 
 /******************** start about 2section **************** */
@@ -215,17 +244,20 @@ nav ul li.active a{
 }
 
 .about-info .git-contributions img{width: 100%; margin-bottom: 0.7em; object-fit: contain;}
+
 .about-info .git-contributions p{text-align: center;}
 
+
 /*********************** start portfolio section *************/
-.filter-btn {
+
+.projects .filter-btn {
     margin-bottom: 2em;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.filter-btn button {
+.projects .filter-btn button {
     font-size: 1.2rem;
     font-weight: 500;
     color: #fff;
@@ -237,37 +269,149 @@ nav ul li.active a{
     transition: .3s background-color ease-in-out;
 }
 
-.filter-btn button:hover,
-.filter-btn button.active{
+.projects .filter-btn button:hover,
+.projects .filter-btn button.active{
     background-color: #c850d0;
 }
 
-.projects-info{
-    display: grid;
-    grid-template-columns: repeat( 3,1fr);
-    gap: 1em;
-    transition: 0.3s ease-in-out;
+.projects .projects-info{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.project-item{
+
+.projects .project-item{
+    width: 30%;
     height: 250px;
-    transition: 0.3s;
+    transition: 0.3s transform ease-in-out;
+    margin: 0 10px 10px 0;
+    position: relative; 
 }
 
-.project-item.hide{
-    display: none;
+.projects .project-item::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    transition: 0.3s background-color ease-in-out;
 }
 
-.project-item img{
+.projects .project-item:hover::before{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.projects .project-item.hide{
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.projects .project-item .project-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: top;
+    z-index: 1;
     transition: 1.5s object-position linear;
 }
 
-.project-item:hover img{
+.projects .project-item:hover .project-img{
     object-position: bottom;
+} 
+
+.projects .project-item .projects-link{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    transition: 0.3s opacity ease-in;
 }
+
+.projects .project-item:hover .projects-link{
+    opacity: 1;
+}
+
+.projects .project-item .projects-link a{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: .5em;
+}
+
+.projects .project-item .projects-link a:last-of-type{margin-right: 0;}
+
+.projects .project-item .projects-link a img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(52deg) brightness(105%) contrast(101%);
+}
+
+
+
+/*********************** start contact section *************/
+
+.contact-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-contain .form-contain{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact-contain .form-contain .form-group{
+    width: 45%;
+    margin-bottom: 1em;
+    position: relative;
+}
+
+
+.contact-contain .form-contain .form-group input,
+.contact-contain .form-contain .form-group textarea{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #c850d0;
+    padding: 0.5em 2em;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #c850d0;
+    transition: 0.3s border ease-in-out;
+    outline: none;
+}
+
+/* .contact-contain .form-contain .form-group:has(textarea) */
+.contact-contain .form-contain .text-massage{
+    width: 100%;
+}
+
+
+.contact-contain .form-contain .form-group img{
+    width:24px;
+    height: 24px;
+    object-fit: contain;
+    position: absolute;
+    top: calc(50% - 12px);
+    left:10px;
+}
+
+.contact-contain .contact-social{
+    width: 30%;
+}
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
