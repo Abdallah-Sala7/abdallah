@@ -86,6 +86,11 @@ nav{
     box-shadow: 1px 1px 26px #302b63;
     backdrop-filter: blur(3px);
     z-index: 111;
+    transition: 0.6s transform ease-out;
+}
+
+nav.is-hide{
+    transform: translateY(200px) translateX(-50%);
 }
 
 nav ul{
@@ -108,6 +113,7 @@ nav ul li{
     align-items: center;
     cursor: pointer;
     position: relative;
+    overflow: hidden;
 }
 
 nav ul li.active{
@@ -116,31 +122,43 @@ nav ul li.active{
     transform: translateY(-20px);
 }
 
+nav ul li:hover{
+    overflow: visible;    
+}
+
 /* li tooltip */
-nav ul li::after{
-    content: "";
+nav ul li::after,
+nav ul li::before{
     position: absolute;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-width: 0.5em;
+    opacity: 0;
+    transition: 0.6s opacity ease-in-out;
+    pointer-events: none;
+}
+
+nav ul li::after{
+    content: "";
+    bottom: 100%;
+    border-width: 10px;
     border-style: solid;
-    border-color: var(--tertiary) transparent transparent transparent;
+    border-color: var(--primary) transparent transparent transparent;
 }
 
 nav ul li::before{
     content: attr(data-tooltip);
-    position: absolute;
-    top: -1.5em;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: calc(100% + 20px);
     font-size: 1.2rem;
     font-weight: 900;
-    color: var(--tertiary);
-    background-color: var(--secondary-light);
+    color: var(--text-color);
+    background-color: var(--primary);
     padding: 0.5rem 1rem;
 }
 
+nav ul li:hover::after,
+nav ul li:hover::before{
+    opacity: 1;
+}
 
 nav ul li a{
     width: 40px;
@@ -235,7 +253,7 @@ nav ul li.active img{
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(52deg) brightness(105%) contrast(101%);
 }
 
-/******************** start about 2section **************** */
+/******************** start about section **************** */
 
 .about-info > div{margin-bottom: 5em;}
 

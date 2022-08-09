@@ -1,15 +1,54 @@
-let navsBtn = document.querySelectorAll('nav ul li');
+const navsBtn = document.querySelectorAll('nav ul li');
+const nav = document.querySelector('nav');
 
 // add event listener to navs
 
-navsBtn.forEach(e =>{
-    e.addEventListener('click', ()=>{
-        navsBtn.forEach(e=>{
-            e.classList.remove('active');
-        })
-        e.classList.add('active');
+navsBtn.forEach(li =>{
+    li.addEventListener('click', ()=>{
+      document.querySelector('nav ul li.active').classList.remove('active');
+      li.classList.add('active');
+
+      let target = li.dataset.target;
+  
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page =>{
+        if(page.classList.contains(target)){
+          page.scrollIntoView({behavior: 'smooth'});
+        }
+      })
     })
 })
+
+
+// auto nav hide on scroll
+
+let isStuk, ticking = false;
+let scrollPosition = window.scrollY ;
+
+document.addEventListener('scroll', ()=>{
+  const scrollY = window.scrollY;
+  if(!ticking){
+
+    window.requestAnimationFrame(()=>{
+
+      if(scrollY > 50 && !isStuk){
+        isStuk = true;
+        nav.classList.add('is-hide');
+      }
+
+      if(scrollY < scrollPosition && isStuk){
+        isStuk = false;
+        nav.classList.remove('is-hide');
+      }
+
+      scrollPosition = scrollY;
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+
 
 // type writer effect
 const textDisplay = document.querySelector('.span-skils')

@@ -16,7 +16,7 @@
     <body>
         <nav>
             <ul>
-                <li class="active" data-tooltip="ihhiii">
+                <li class="active" data-tooltip="home" data-target="landing_page">
                     <a href="#">
                         <img 
                             src="assets/images/icons/home-outline.svg" 
@@ -25,7 +25,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li data-tooltip="about" data-target="about">
                     <a href="#">
                         <img 
                             src="assets/images/icons/person-outline.svg" 
@@ -34,7 +34,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li data-tooltip="portfolio" data-target="projects">
                     <a href="#">
                         <img 
                             src="assets/images/icons/briefcase.svg" 
@@ -43,7 +43,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li data-tooltip="contact" data-target="contact-us">
                     <a href="#">
                         <img 
                             src="assets/images/icons/paper-plane-outline.svg" 
@@ -55,7 +55,7 @@
         </nav>
 
         <main>
-            <header class="landing_page container">
+            <header class="landing_page page container">
                 <div class="landing_info">
                     <h1>
                         hi there 
@@ -82,7 +82,7 @@
                 </div>
             </header>
 
-            <section class="about">
+            <section class="about page">
                 <div class="container">
                     <h2 class="section-title">
                         About me
@@ -161,7 +161,7 @@
                 </div>
             </section>
 
-            <section class="projects">
+            <section class="projects page">
                 <div class="container">
                     <h2 class="section-title">
                         projects
@@ -405,7 +405,7 @@
                 </div>
             </section>
 
-            <section class="contact-us">
+            <section class="contact-us page">
                 <div class="container">
                     <h2 class="section-title">
                         Contact Us
@@ -513,7 +513,7 @@
                                 <button type="submit" class="form-btn">
                                     Send
                                     <img 
-                                        src="assets/images/icons/send-outline.svg" 
+                                        src="assets/images/icons/send.svg" 
                                         alt="send icon"
                                         loading="lazy"
                                         class="form-icon" />
