@@ -3,12 +3,12 @@ const nav = document.querySelector('nav');
 
 // add event listener to navs
 
-navsBtn.forEach(li =>{
-    li.addEventListener('click', ()=>{
+navsBtn.forEach(navs =>{
+    navs.addEventListener('click', ()=>{
       document.querySelector('nav ul li.active').classList.remove('active');
-      li.classList.add('active');
+      navs.classList.add('active');
 
-      let target = li.dataset.target;
+      let target = navs.dataset.target;
   
       const pages = document.querySelectorAll('.page');
       pages.forEach(page =>{

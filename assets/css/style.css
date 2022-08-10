@@ -57,7 +57,10 @@ a{text-decoration: none; color: inherit;}
 input,textarea,button{outline: none; border: none; color: inherit;}
 button{cursor: pointer;}
 
-
+.container {
+    margin: 0 auto;
+    padding: 0 1em;
+}
 section{
     padding-top: 3em;
 }
@@ -75,7 +78,7 @@ section .section-title{
 
 /************** start navbar ************/
 nav{
-    width: 40%;
+    width: 90%;
     height: 60px;
     position: fixed;
     bottom: 10px;
@@ -105,12 +108,9 @@ nav ul{
 
 nav ul li{
     transition: 0.3s transform ease-in-out;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -161,15 +161,17 @@ nav ul li:hover::before{
 }
 
 nav ul li a{
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
 } 
 
 nav ul li a img{
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
     filter: invert(46%) sepia(65%) saturate(1291%) hue-rotate(268deg) brightness(85%) contrast(90%);
     transition: 0.3s filter ease-in-out;
@@ -182,42 +184,46 @@ nav ul li.active img{
 
 
 /************** start (header-landing) page ************/
-
-.landing_page{
+header{
     width: 100%;
-    height: 100vh;
+    padding: 70px 0;
+}
+.header-contain{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.landing_page .landing_img{
-    width: 30%;
+.header-contain .landing-img{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1em;
 }
 
-.landing_page .landing_img img{
+.header-contain .landing-img img{
     width: 100%;
     height: 100%;
-    object-fit: content;
+    object-fit: contain;
 }
-
-.landing_page .landing_info h1{
+.header-contain .landing-info{width: 100%;}
+.header-contain .landing-info h1{
     line-height: 1.7;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.07rem;
     text-transform: capitalize;
-    margin-bottom: 3rem;
+    margin-bottom: 1.2em;
 }
 
-.landing_page .landing_info h1 span{
-    font-size: 3rem;
+.header-contain .landing-info h1 span{
+    font-size: 2rem;
     display: block;
 } 
 
-.landing_page .landing_info h1 .span-skils{min-height: 82px;}
+.header-contain .landing-info h1 .span-skils{min-height: 2em;}
 
-.landing_page .landing_info h1 .dev-name{
+.header-contain .landing-info h1 .dev-name{
     display: inline;
     font-weight: 900;
     background-image: linear-gradient(43deg, var(--primary) 0%, var(--secondary) 46%, var(--tertiary) 100%);
@@ -226,13 +232,14 @@ nav ul li.active img{
     color: transparent;
 }
 
-.landing_page .landing_info .download-cv{
-    width: 250px;
+.header-contain .landing-info .download-cv{
+    width: 180px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    font-size: 1.5rem;
+    padding: 0.7em 1em;
+    font-size: 1rem;
     font-weight: 700;
     background-color: var(--secondary);
     border-radius: 120px;
@@ -241,13 +248,13 @@ nav ul li.active img{
     transition: .3s box-shadow ease-in-out;
 }
 
-.landing_page .landing_info .download-cv:hover{
+.header-contain .landing-info .download-cv:hover{
     box-shadow: inset 0px 0px 0px var(--primary), 0px 0px 20px var(--secondary-light);
 }
 
-.landing_page .landing_info .download-cv img{
-    width: 30px;
-    height: 30px;
+.header-contain .landing-info .download-cv img{
+    width: 25px;
+    height: 25px;
     object-fit: contain;
     transition: 0.3s filter ease-in-out;
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(52deg) brightness(105%) contrast(101%);
@@ -424,6 +431,30 @@ nav ul li.active img{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.contact-contain::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    right: 65%;
+    background-color: var(--secondary-light);
+}
+.contact-contain::after{
+    content: "or";
+    position: absolute;
+    top: 50%;
+    right: calc(65% - 1em);
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    border: 1px solid var(--secondary-light);
+    border-radius: 50%;
+    background-color: #262545;
 }
 
 
@@ -481,27 +512,6 @@ nav ul li.active img{
     object-fit: contain;
     filter: invert(100%) sepia(100%) saturate(163%) hue-rotate(130deg) brightness(113%) contrast(101%);
     transition: 0.3s transform ease-in-out;
-}
-
-
-.contact-contain .v-line{
-    width: 1px;
-    background-color: var(--secondary-light);
-    position: relative;
-}
-
-.contact-contain .v-line::before{
-    content: "or";
-    position: absolute;
-    top: 50%;
-    left: -1em;
-    width: 2em;
-    height: 2em;
-    line-height: 2em;
-    text-align: center;
-    border: 1px solid var(--secondary-light);
-    border-radius: 50%;
-    background-color: #262545;
 }
 
 .contact-contain .form-contain{
@@ -634,13 +644,34 @@ footer .footer-contain .footer-icons img{
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .container{max-width: 540px; margin: auto;}
+    .container{padding: 0; max-width: 540px;}
+
+    nav{width: 500px;}
     
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
     .container{max-width: 720px;}
+
+    nav ul li{width: 70px; height: 70px;}
+    nav ul li a img{width: 40px; height: 40px; }
+
+    header{padding: 145px 0;}
+
+    .header-contain{justify-content: space-between;}
+
+    .header-contain .landing-img{width: 350px; height: 350px; margin-bottom: 0;}
+
+    .header-contain .landing-info{width: 450px;}
+
+    .header-contain .landing-info h1{font-size: 2.5rem;}
+    
+    .header-contain .landing-info h1 span{font-size: 3rem;}
+
+    .header-contain .landing-info .download-cv{width: 250px; margin: 0; font-size: 1.5rem;}
+
+    .header-contain .landing-info .download-cv img{width: 30px; height: 30px;}
 }
 
 /* Large devices (desktops, 992px and up) */
