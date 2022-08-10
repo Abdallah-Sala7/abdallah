@@ -314,7 +314,7 @@ header{
     flex-wrap: wrap;
 }
 
-.about-info .personal-skils ul{width: 140px;}
+.about-info .personal-skils ul{width: 140px; }
 .about-info .personal-skils ul li{
     margin-bottom: 1em;
     font-size: 1.2rem;
@@ -359,10 +359,10 @@ header{
 }
 
 .projects .project-item{
-    width: 30%;
+    width: 100%;
     height: 250px;
     transition: 0.3s transform ease-in-out;
-    margin: 0 10px 10px 0;
+    margin: 5px;
     position: relative; 
 }
 
@@ -440,20 +440,21 @@ header{
     position: relative;
 }
 
-.contact-contain::before{
+.contact-contain::before {
     content: "";
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    right: 65%;
+    top: calc(128px + 2em);
+    height: 1px;
+    right: 0;
+    left: 0;
     background-color: var(--secondary-light);
 }
+
 .contact-contain::after{
     content: "or";
     position: absolute;
-    top: 50%;
-    right: calc(65% - 1em);
+    top: calc(128px + 1em);
+    right: calc(50% - 1em);
     width: 2em;
     height: 2em;
     line-height: 2em;
@@ -464,13 +465,15 @@ header{
 }
 
 
+
 .contact-contain .contact-social{
-    width: 30%;
+    width: 100%;
     text-align: center;
+    margin-bottom: 4em;
 }
 
 .contact-contain .contact-social .social-title{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.25em;
     text-transform: uppercase;
@@ -482,7 +485,7 @@ header{
 }
 
 .contact-contain .contact-social .social-info{
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 500;
     margin-bottom: 2.5em;
     color: rgba(255, 255, 255, 0.555);
@@ -497,8 +500,8 @@ header{
 
 .contact-contain .contact-social .social-icons a{
     margin-right: 1.5em;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     border-radius: 50%;
     background-color: var(--primary);
@@ -514,14 +517,14 @@ header{
 
 }
 .contact-contain .contact-social .social-icons img{
-    width: 30px;
+    width: 20px;
     object-fit: contain;
     filter: invert(100%) sepia(100%) saturate(163%) hue-rotate(130deg) brightness(113%) contrast(101%);
     transition: 0.3s transform ease-in-out;
 }
 
 .contact-contain .form-contain{
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -569,7 +572,7 @@ header{
 
 
 .contact-contain .form-contain .form-group .form-btn{
-    width: 50%;
+    width: 170px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -610,20 +613,23 @@ footer .footer-contain{
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    flex-wrap: wrap;
 }
 
+footer .footer-contain p{font-size: 0.6rem;} 
+
 footer .footer-contain .footer-icons {
-    width: 200px;
+    width: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
 }
 
+footer .footer-contain .footer-icons li{width: 17px; height: 17px;}
+
 footer .footer-contain .footer-icons img{
-    width: 20px;
-    height: 20px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     filter: invert(100%) sepia(100%) saturate(163%) hue-rotate(130deg) brightness(113%) contrast(101%);
     opacity: 0.5;
@@ -693,6 +699,43 @@ footer .footer-contain .footer-icons img{
     .about-info .personal-info{ justify-content: space-between;}
 
     .about-info .personal-info p{width: 50%; font-size: 1.5rem; margin-bottom: 0;}
+
+    .projects .project-item{width: 30%;}
+
+    /* ******************************************** */
+
+    .contact-contain::before{
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        height: auto;
+        right: 65%;
+        left: auto;
+        background-color: var(--secondary-light);
+    }
+
+    .contact-contain::after{top: 50%; right: calc(65% - 1em);}
+
+    .contact-contain .contact-social{width: 30%; margin-bottom: 0;}
+
+    .contact-contain .contact-social .social-title{font-size: 3rem;}
+
+    .contact-contain .contact-social .social-info{font-size: 1rem;}
+
+    .contact-contain .contact-social .social-icons a{width: 50px; height: 50px;}
+
+    .contact-contain .contact-social .social-icons a img{width: 30px; height: 30px;}
+
+    .contact-contain .form-contain{width: 60%;}
+
+    /* *********************************************** */
+
+    footer .footer-contain p{font-size: 1rem;}
+
+    footer .footer-contain .footer-icons{width: 250px;}
+
+    footer .footer-contain .footer-icons li{width: 20px; height: 20px;}
+
 }
 
 /* Large devices (desktops, 992px and up) */
