@@ -65,9 +65,9 @@ section{
     padding-top: 3em;
 }
 section .section-title{
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 900;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
     text-align: center;
     text-transform: capitalize;
     background-image: linear-gradient(180deg,  var(--secondary) 5%, var(--tertiary) 100%);
@@ -186,13 +186,13 @@ nav ul li.active img{
 /************** start (header-landing) page ************/
 header{
     width: 100%;
-    padding: 70px 0;
 }
 .header-contain{
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .header-contain .landing-img{
@@ -221,7 +221,13 @@ header{
     display: block;
 } 
 
-.header-contain .landing-info h1 .span-skils{min-height: 2em;}
+.header-contain .landing-info h1 .span-skils{
+    height: 1.7em;
+    border-right: 5px solid transparent;
+    animation: witerBorder 0.3s linear infinite;
+    padding-right: 0.1em;
+    width: fit-content;
+}
 
 .header-contain .landing-info h1 .dev-name{
     display: inline;
@@ -262,17 +268,16 @@ header{
 
 /******************** start about section **************** */
 
-.about-info > div{margin-bottom: 5em;}
+.about-info > div:not(:last-child){margin-bottom: 5em;}
 
 .about-info h3{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1em;
     text-transform: capitalize;
     letter-spacing: 0.07rem;
     width: fit-content;
-    padding-bottom: 0.5rem;
-
+    padding-bottom: 0.25em;
     border-bottom: 2px solid;
     border-image-source: linear-gradient(43deg, var(--primary) 0%, var(--secondary) 46%, var(--tertiary) 100%);
     border-image-slice: 1;
@@ -281,24 +286,25 @@ header{
 
 .about-info .personal-info{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: center;
-    margin-bottom: 5rem;
+    flex-wrap: wrap;
 }
 
 .about-info .personal-info p{
-    width: 50%;
-    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 2em;
-    letter-spacing: 0.025rem;
+    letter-spacing: 0.025em;
+    margin-bottom: 2em;
     text-transform: capitalize;
 }
 
 .about-info .personal-info img{
-    width: 40%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -308,7 +314,7 @@ header{
     flex-wrap: wrap;
 }
 
-.about-info .personal-skils ul{width: 190px;}
+.about-info .personal-skils ul{width: 140px;}
 .about-info .personal-skils ul li{
     margin-bottom: 1em;
     font-size: 1.2rem;
@@ -624,9 +630,16 @@ footer .footer-contain .footer-icons img{
     margin-right: 0.5em;
 }
 
+/* ************ anmation  */
 
-
-
+@keyframes witerBorder {
+    from {
+        border-color: #fff;
+    }
+    to {
+        border-color: rgba(255, 255, 255, 0.247);
+    }
+}
 
 
 
@@ -657,9 +670,9 @@ footer .footer-contain .footer-icons img{
     nav ul li{width: 70px; height: 70px;}
     nav ul li a img{width: 40px; height: 40px; }
 
-    header{padding: 145px 0;}
+    /* header{padding: 145px 0;} */
 
-    .header-contain{justify-content: space-between;}
+    .header-contain{flex-direction: row; justify-content: space-between;}
 
     .header-contain .landing-img{width: 350px; height: 350px; margin-bottom: 0;}
 
@@ -672,6 +685,14 @@ footer .footer-contain .footer-icons img{
     .header-contain .landing-info .download-cv{width: 250px; margin: 0; font-size: 1.5rem;}
 
     .header-contain .landing-info .download-cv img{width: 30px; height: 30px;}
+
+    section .section-title{font-size: 4rem;}
+
+    .about-info h3{font-size: 2rem;}
+
+    .about-info .personal-info{ justify-content: space-between;}
+
+    .about-info .personal-info p{width: 50%; font-size: 1.5rem; margin-bottom: 0;}
 }
 
 /* Large devices (desktops, 992px and up) */
