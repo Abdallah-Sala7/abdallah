@@ -38,8 +38,7 @@ body{
 
 main{
     background-image: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    padding-bottom: 6em;
-    scroll-behavior: smooth;
+    padding-bottom: 2em;
 }
 
 ::selection{background: var(--secondary-light); color: var(--tertiary); } 
@@ -132,6 +131,7 @@ nav ul li::before{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    border-radius: 0.5em;
     opacity: 0;
     transition: 0.6s opacity ease-in-out;
     pointer-events: none;
@@ -419,10 +419,10 @@ header{
     width: 30px;
     height: 30px;
     display: inline-block;
-    margin-right: .5em;
+
 }
 
-.projects .project-item .projects-link a:last-of-type{margin-right: 0;}
+.projects .project-item .projects-link a:not(:last-of-type){margin-right: .5em;}
 
 .projects .project-item .projects-link a img{
     width: 100%;
@@ -499,7 +499,6 @@ header{
 }
 
 .contact-contain .contact-social .social-icons a{
-    margin-right: 1.5em;
     width: 40px;
     height: 40px;
     display: flex;
@@ -510,7 +509,7 @@ header{
     transition: 0.3s background-color ease-in-out;
 }
 
-.contact-contain .contact-social .social-icons a:last-of-type{margin-right: 0;}
+.contact-contain .contact-social .social-icons a:not(:last-of-type){margin-right: 1.1em;}
 
 .contact-contain .contact-social .social-icons a:hover{
     background-color: var(--secondary)
@@ -531,7 +530,7 @@ header{
 }
 
 .contact-contain .form-contain .form-group{
-    width: 48%;
+    width: 100%;
     margin-bottom: 2em;
     position: relative;
 }
@@ -552,10 +551,6 @@ header{
     padding: 0.7em;
     height: 150px;
     resize: vertical;
-}
-/* .contact-contain .form-contain .form-group:has(textarea) */
-.contact-contain .form-contain .text-massage{
-    width: 100%;
 }
 
 .contact-contain .form-contain .form-group > img{
@@ -673,6 +668,10 @@ footer .footer-contain .footer-icons img{
 @media (min-width: 768px) { 
     .container{max-width: 720px;}
 
+    section .section-title{font-size: 3.5rem;}
+
+    /* *************************** */
+
     nav ul li{width: 70px; height: 70px;}
     nav ul li a img{width: 40px; height: 40px; }
 
@@ -680,27 +679,31 @@ footer .footer-contain .footer-icons img{
 
     .header-contain{flex-direction: row; justify-content: space-between;}
 
-    .header-contain .landing-img{width: 350px; height: 350px; margin-bottom: 0;}
+    .header-contain .landing-img{width: 300px; height: 300px; margin-bottom: 0;}
 
-    .header-contain .landing-info{width: 450px;}
+    .header-contain .landing-info{width: 400px;}
 
-    .header-contain .landing-info h1{font-size: 2.5rem;}
+    .header-contain .landing-info h1{font-size: 2rem;}
     
-    .header-contain .landing-info h1 span{font-size: 3rem;}
+    .header-contain .landing-info h1 span{font-size: 2.5rem;}
 
-    .header-contain .landing-info .download-cv{width: 250px; margin: 0; font-size: 1.5rem;}
+    .header-contain .landing-info .download-cv{width: 200px; margin: 0; font-size: 1.2rem;}
 
     .header-contain .landing-info .download-cv img{width: 30px; height: 30px;}
 
-    section .section-title{font-size: 4rem;}
+    /* ******************************** */
 
     .about-info h3{font-size: 2rem;}
 
     .about-info .personal-info{ justify-content: space-between;}
 
-    .about-info .personal-info p{width: 50%; font-size: 1.5rem; margin-bottom: 0;}
+    .about-info .personal-info p{width: 50%; font-size: 1.2rem; margin-bottom: 0;}
 
-    .projects .project-item{width: 30%;}
+    .about-info .personal-info img{width: 300px; height: 300px;}
+
+    /* ********************************* */
+
+    .projects .project-item{width: 45%;}
 
     /* ******************************************** */
 
@@ -718,15 +721,13 @@ footer .footer-contain .footer-icons img{
 
     .contact-contain .contact-social{width: 30%; margin-bottom: 0;}
 
-    .contact-contain .contact-social .social-title{font-size: 3rem;}
+    .contact-contain .contact-social .social-title{font-size: 2rem;}
 
     .contact-contain .contact-social .social-info{font-size: 1rem;}
 
-    .contact-contain .contact-social .social-icons a{width: 50px; height: 50px;}
-
-    .contact-contain .contact-social .social-icons a img{width: 30px; height: 30px;}
-
     .contact-contain .form-contain{width: 60%;}
+
+    .contact-contain .form-contain .form-group:not(:nth-last-of-type(2)){width: 48%;}
 
     /* *********************************************** */
 
@@ -741,6 +742,38 @@ footer .footer-contain .footer-icons img{
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     .container{max-width: 960px;}
+
+    section .section-title{font-size: 4rem;}
+
+    /* ******************************** */
+
+    .header-contain .landing-img{width: 350px; height: 350px;}
+
+    .header-contain .landing-info{width: 450px;}
+
+    .header-contain .landing-info h1{font-size: 2.5rem;}
+    
+    .header-contain .landing-info h1 span{font-size: 3rem;}
+
+    .header-contain .landing-info .download-cv{width: 250px; font-size: 1.5rem;}
+
+    /* ************************************************* */
+
+    .about-info .personal-info p{font-size: 1.5rem;}
+
+    /* ************************************* */
+
+    .projects .project-item{width: 30%;}
+
+    /* ********************************************** */
+
+    .contact-contain .contact-social .social-title{font-size: 3rem;}
+
+    .contact-contain .contact-social .social-icons a{width: 50px; height: 50px;}
+
+    .contact-contain .contact-social .social-icons a img{width: 30px; height: 30px;}
+
+    .contact-contain .contact-social .social-icons a:not(:last-of-type){margin-right: 1.5em;}
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
