@@ -1,18 +1,21 @@
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2');
+    src: url('../fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Bold.woff') format('woff');
     font-weight: 900;
 }
 
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2');
+    src: url('../fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Medium.woff') format('woff');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'roboto';
-    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2');
+    src: url('../fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/roboto/Roboto-Regular.woff') format('woff');
     font-weight: 500;
 }
 
@@ -60,9 +63,11 @@ button{cursor: pointer;}
     margin: 0 auto;
     padding: 0 1em;
 }
+
 section{
     padding-top: 3em;
 }
+
 section .section-title{
     font-size: 2.5rem;
     font-weight: 900;
@@ -102,7 +107,6 @@ nav ul{
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-
 }
 
 nav ul li{
@@ -131,7 +135,6 @@ nav ul li::before{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 0.5em;
     opacity: 0;
     transition: 0.6s opacity ease-in-out;
     pointer-events: none;
@@ -153,6 +156,7 @@ nav ul li::before{
     color: var(--text-color);
     background-color: var(--primary);
     padding: 0.5rem 1rem;
+    border-radius: 0.5em;
 }
 
 nav ul li:hover::after,
@@ -214,11 +218,13 @@ header{
     letter-spacing: 0.07rem;
     text-transform: capitalize;
     margin-bottom: 1.2em;
+    text-align: center;
 }
 
 .header-contain .landing-info h1 span{
     font-size: 2rem;
     display: block;
+    margin: auto;
 } 
 
 .header-contain .landing-info h1 .span-skils{
@@ -270,7 +276,7 @@ header{
 
 .about-info > div:not(:last-child){margin-bottom: 5em;}
 
-.about-info h3{
+.about-info .about-subtitle{
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1em;
@@ -322,7 +328,15 @@ header{
     text-transform: capitalize;
 }
 
-.about-info .git-contributions img{width: 100%; margin-bottom: 0.7em; object-fit: contain;}
+.git-contributions-img{
+    width: 100%; 
+    height: auto;
+    margin-bottom: 0.7em; 
+}
+
+.about-info .git-contributions img{
+    object-fit: contain;
+}
 
 .about-info .git-contributions p{text-align: center;}
 
@@ -693,7 +707,7 @@ footer .footer-contain .footer-icons img{
 
     /* ******************************** */
 
-    .about-info h3{font-size: 2rem;}
+    .about-info .about-subtitle{font-size: 2rem;}
 
     .about-info .personal-info{ justify-content: space-between;}
 
@@ -751,9 +765,9 @@ footer .footer-contain .footer-icons img{
 
     .header-contain .landing-info{width: 450px;}
 
-    .header-contain .landing-info h1{font-size: 2.5rem;}
+    .header-contain .landing-info h1{font-size: 2.5rem; text-align: left;}
     
-    .header-contain .landing-info h1 span{font-size: 3rem;}
+    .header-contain .landing-info h1 span{font-size: 3rem; margin: 0;}
 
     .header-contain .landing-info .download-cv{width: 250px; font-size: 1.5rem;}
 

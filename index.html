@@ -1,596 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="hi im abdallah salah frontend developer" />    
-        <meta name="keywords" content="portfolio Abdallah salah frontend" />
-        <meta name="author" content="Abdallah salah" />
-        
-        <title>
-            Abdallah Salah
-        </title>
 
-        <link rel="stylesheet" href="assets/css/style.css" />
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li class="active" data-tooltip="home" data-target="header">
-                    <a href="#">
-                        <img 
-                            src="assets/images/icons/home-outline.svg" 
-                            alt="header page"
-                            loading="lazy" />
-                    </a>
-                </li>
-
-                <li data-tooltip="about" data-target="about">
-                    <a href="#">
-                        <img 
-                            src="assets/images/icons/person-outline.svg" 
-                            alt="about us page"
-                            loading="lazy" />
-                    </a>
-                </li>
-
-                <li data-tooltip="portfolio" data-target="projects">
-                    <a href="#">
-                        <img 
-                            src="assets/images/icons/briefcase.svg" 
-                            alt="portfolio page"
-                            loading="lazy" />
-                    </a>
-                </li>
-
-                <li data-tooltip="contact" data-target="contact-us">
-                    <a href="#">
-                        <img 
-                            src="assets/images/icons/paper-plane-outline.svg" 
-                            alt="contact us page"
-                            loading="lazy" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <main>
-            <header class="page header">
-                <div class="container">
-                    <div class="header-contain">
-                        <div class="landing-img">
-                            <img 
-                                src="assets/images/avatar.jpg" 
-                                alt="avatar"
-                                loading="lazy" />
-                        </div>
-
-                        <div class="landing-info">
-                            <h1>
-                                hi there 
-                                <span>i'm <span class="dev-name">Abdallah salah</span></span>
-                                <span class="span-skils"> frontend</span>
-                            </h1>
-
-                            <a href="#" download="#" class="download-cv">
-                                <span>
-                                    Download CV
-                                </span>
-                                <img 
-                                    src="assets/images/icons/cloud-download.svg" 
-                                    alt="download cv"
-                                    loading="lazy" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </header>
-
-            <section class="about page">
-                <div class="container">
-                    <h2 class="section-title">
-                        About me
-                    </h2>
-
-                    <div class="about-info">
-                        <h3>
-                            personal info
-                        </h3>
-
-                        <div class="personal-info">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem eum, laborum similique numquam asperiores delectus alias est ad, provident magni vel quas nam error, consectetur officiis totam aliquam incidunt?
-                            </p>
-
-                            <img 
-                                src="assets/images/avatar.jpg" 
-                                alt="" 
-                                loading="lazy"/>
-                        </div>
-
-                        <h3>
-                            skils
-                        </h3>
-
-                        <div class="personal-skils">
-                            <ul>
-                                <li>html</li>
-                                <li>css</li>
-                                <li>java script</li>
-                                <li>jquery</li>
-                            </ul>
-
-                            <ul>
-                                <li>react js</li>
-                                <li>react redux</li>
-                                <li>react hoaks</li>
-                                <li>react toolkit</li>
-                            </ul>
-
-                            <ul>
-                                <li>bootstrap</li>
-                                <li>tailwind</li>
-                                <li>sass</li>
-                                <li>matrial ui</li>
-                            </ul>
-
-                            <ul>
-                                <li>githup</li>
-                                <li>figma</li>
-                                <li>adobe xe</li>
-                            </ul>
-
-                            <ul>
-                                <li>android studio</li>
-                                <li>java</li>
-                                <li>ktolin</li>
-                            </ul>
-                        </div>
-
-                        <h3>
-                            days i code
-                        </h3>
-
-                        <div class="git-contributions">
-                            <img 
-                                src="https://ghchart.rshah.org/abdallah-sala7" 
-                                alt="abdallah salah Github chart" 
-                                loading="lazy" />
-
-                            <p>
-                                Last year contributions
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="projects page">
-                <div class="container">
-                    <h2 class="section-title">
-                        projects
-                    </h2>
-
-                    <div class="filter-btn">
-                        <button class="active" data-filter="all">
-                            all
-                        </button>
-
-                        <button data-filter="web-site">
-                            web sites
-                        </button>
-
-                        <button data-filter="web-app">
-                            web apps
-                        </button>
-
-                        <button data-filter="android">
-                            Android apps
-                        </button> 
-                    </div>
-                    
-                    <div class="projects-info">
-                        <div class="project-item android" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-app" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-app" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="project-item web-site" data-bg="project.jpg">
-                            <img 
-                                src="assets/images/project.jpg" 
-                                alt="project1"
-                                loading="lazy"
-                                class="project-img" />
-
-                            <div class="projects-link">
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/link-solid.svg" 
-                                        alt="project demo link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a href="#">
-                                    <img 
-                                        src="assets/images/icons/code-slash.svg" 
-                                        alt="project code in github link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="contact-us page">
-                <div class="container">
-                    <h2 class="section-title">
-                        Contact Us
-                    </h2>
-                    <div class="contact-contain">
-                        <div class="contact-social">
-                            <h3 class="social-title">
-                                Find me on
-                            </h3>
-
-                            <p class="social-info">
-                                Feel free to connect with me
-                            </p>
-
-                            <div class="social-icons">
-                                <a 
-                                    href="http://linkedin.com" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src="assets/images/icons/logo-linkedin.svg" 
-                                        alt="linkedin link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a 
-                                    href="http://github.com" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src="assets/images/icons/logo-github.svg" 
-                                        alt="github link"
-                                        loading="lazy" />
-                                </a>
-                                
-                                <a 
-                                    href="http://youtube.com" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src="assets/images/icons/logo-whatsapp.svg" 
-                                        alt="whatsapp link"
-                                        loading="lazy" />
-                                </a>
-
-                                <a 
-                                    href="http://youtube.com" 
-                                    target="_blank" 
-                                    rel="noopener noreferrer">
-                                    <img 
-                                        src="assets/images/icons/call-outline.svg" 
-                                        alt="youtube link"
-                                        loading="lazy" />
-                                </a>
-                            </div>
-                        </div>
-
-                        <form action="" class="form-contain">
-                            <div class="form-group">
-                                <img 
-                                    src="assets/images/icons/person-outline.svg" 
-                                    alt="user icon"
-                                    loading="lazy"
-                                    class="form-icon" />
-
-                                <input type="text" class="form-control" placeholder="Name" />
-                            </div>
-
-                            <div class="form-group">
-                                <img 
-                                    src="assets/images/icons/mail-outline.svg" 
-                                    alt="email icon"
-                                    loading="lazy"
-                                    class="form-icon" />
-
-                                <input type="text" class="form-control" placeholder="Email" />
-                            </div>
-
-                            <div class="form-group">
-                                <img 
-                                    src="assets/images/icons/briefcase.svg" 
-                                    alt="Jop Title"
-                                    loading="lazy"
-                                    class="form-icon" />
-
-                                <input type="text" class="form-control" placeholder="Jop Title" />
-                            </div>
-
-                            <div class="form-group">
-                                <img 
-                                    src="assets/images/icons/call-outline.svg" 
-                                    alt="Phone Number"
-                                    loading="lazy"
-                                    class="form-icon" />
-
-                                <input type="text" class="form-control" placeholder="Phone Number" />
-                            </div>
-
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Message"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-btn">
-                                    Send
-                                    <img 
-                                        src="assets/images/icons/send.svg" 
-                                        alt="send icon"
-                                        loading="lazy"
-                                        class="form-icon" />
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="hi im abdallah salah frontend developer" />
+    <meta name="keywords" content="portfolio Abdallah salah frontend" />
+    <meta name="author" content="Abdallah salah" />
+    <meta name="theme-color" content="#7158D0" />
+
+    <title>
+        Abdallah Salah
+    </title>
+    <link rel="shortcut icon" href="assets/images/avatar.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="active" data-tooltip="home" data-target="header">
+                <a href="#">
+                    <img src="assets/images/icons/home-outline.svg" alt="header page" loading="lazy" />
+                </a>
+            </li>
+
+            <li data-tooltip="about" data-target="about">
+                <a href="#">
+                    <img src="assets/images/icons/person-outline.svg" alt="about us page" loading="lazy" />
+                </a>
+            </li>
+
+            <li data-tooltip="portfolio" data-target="projects">
+                <a href="#">
+                    <img src="assets/images/icons/briefcase.svg" alt="portfolio page" loading="lazy" />
+                </a>
+            </li>
+
+            <li data-tooltip="contact" data-target="contact-us">
+                <a href="#">
+                    <img src="assets/images/icons/paper-plane-outline.svg" alt="contact us page" loading="lazy" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="page header">
             <div class="container">
-                <div class="footer-contain">
-                    <p class="footer-info">
-                        Developed by Abdallah Salah
-                    </p>
+                <div class="header-contain">
+                    <div class="landing-img">
+                        <img src="assets/images/avatar.webp" alt="avatar"  />
+                    </div>
 
-                    <p class="copy-right-info">
-                        &copy; 2022 - Abdallah
-                    </p>
+                    <div class="landing-info">
+                        <h1>
+                            hi there
+                            <span>i'm <span class="dev-name">Abdallah salah</span></span>
+                            <span class="span-skils"> frontend</span>
+                        </h1>
 
-                    <ul class="footer-icons">
-                        <li>
-                            <a 
-                                href="http://github.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                <img 
-                                    src="assets/images/icons/logo-github.svg" 
-                                    alt="github link"
-                                    loading="lazy" />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a 
-                                href="http://linkedin.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                <img 
-                                    src="assets/images/icons/logo-linkedin.svg" 
-                                    alt="linkedin link"
-                                    loading="lazy" />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a 
-                                href="http://twitter.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                <img 
-                                    src="assets/images/icons/logo-twitter.svg" 
-                                    alt="twitter link"
-                                    loading="lazy" />
-                            </a>
-                        </li>
-
-                        <li>
-                            <a 
-                                href="http://facebook.com" 
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                <img 
-                                    src="assets/images/icons/logo-facebook.svg" 
-                                    alt="facebook link"
-                                    loading="lazy" />
-                            </a>
-                        </li>
-                    </ul>
+                        <a href="#" download="#" class="download-cv">
+                            <span>
+                                Download CV
+                            </span>
+                            <img src="assets/images/icons/cloud-download.svg" alt="download cv" loading="lazy" />
+                        </a>
+                    </div>
                 </div>
             </div>
-        </footer>
+        </header>
 
-        <script src="assets/js/main.js"></script>
-    </body>
+        <section class="about page">
+            <div class="container">
+                <h1 class="section-title">
+                    About me
+                </h1>
+
+                <div class="about-info">
+                    <h2 class="about-subtitle">
+                        personal info
+                    </h2>
+
+                    <div class="personal-info">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem eum, laborum
+                            similique numquam asperiores delectus alias est ad, provident magni vel quas nam error,
+                            consectetur officiis totam aliquam incidunt?
+                        </p>
+
+                        <img src="assets/images/avatar.webp" alt="" loading="lazy" />
+                    </div>
+
+                    <h3 class="about-subtitle">
+                        skils
+                    </h3>
+
+                    <div class="personal-skils">
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>java script</li>
+                            <li>jquery</li>
+                        </ul>
+
+                        <ul>
+                            <li>react js</li>
+                            <li>react redux</li>
+                            <li>react hoaks</li>
+                            <li>react toolkit</li>
+                        </ul>
+
+                        <ul>
+                            <li>bootstrap</li>
+                            <li>tailwind</li>
+                            <li>sass</li>
+                            <li>matrial ui</li>
+                        </ul>
+
+                        <ul>
+                            <li>githup</li>
+                            <li>figma</li>
+                            <li>adobe xe</li>
+                        </ul>
+
+                        <ul>
+                            <li>android studio</li>
+                            <li>java</li>
+                            <li>ktolin</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="about-subtitle">
+                        days i code
+                    </h4>
+
+                    <div class="git-contributions">
+                        <div class="git-contributions-img">
+                            <img 
+                                src="https://ghchart.rshah.org/abdallah-sala7" 
+                                alt="abdallah salah Github chart"
+                                width="100%"
+                                height="100%"
+                                loading="lazy" />
+                        </div>
+
+                        <p>
+                            Last year contributions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects page">
+            <div class="container">
+                <h1 class="section-title">
+                    projects
+                </h1>
+
+                <div class="filter-btn">
+                    <button class="active" data-filter="all">
+                        all
+                    </button>
+
+                    <button data-filter="web-site">
+                        web sites
+                    </button>
+
+                    <button data-filter="web-app">
+                        web apps
+                    </button>
+
+                    <button data-filter="android">
+                        Android apps
+                    </button>
+                </div>
+
+                <div class="projects-info">
+                    <div class="project-item android" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-app" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-app" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-item web-site" data-bg="project.jpg">
+                        <img src="assets/images/hilton.webp" alt="project1" loading="lazy" class="project-img" />
+
+                        <div class="projects-link">
+                            <a href="#">
+                                <img src="assets/images/icons/link-solid.svg" alt="project demo link" loading="lazy" />
+                            </a>
+
+                            <a href="#">
+                                <img src="assets/images/icons/code-slash.svg" alt="project code in github link"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-us page">
+            <div class="container">
+                <h1 class="section-title">
+                    Contact Us
+                </h1>
+                <div class="contact-contain">
+                    <div class="contact-social">
+                        <h2 class="social-title">
+                            Find me on
+                        </h2>
+
+                        <p class="social-info">
+                            Feel free to connect with me
+                        </p>
+
+                        <div class="social-icons">
+                            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/icons/logo-linkedin.svg" alt="linkedin link" loading="lazy" />
+                            </a>
+
+                            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/icons/logo-github.svg" alt="github link" loading="lazy" />
+                            </a>
+
+                            <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/icons/logo-whatsapp.svg" alt="whatsapp link" loading="lazy" />
+                            </a>
+
+                            <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/images/icons/call-outline.svg" alt="youtube link" loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <form action="" class="form-contain">
+                        <div class="form-group">
+                            <img src="assets/images/icons/person-outline.svg" alt="user icon" loading="lazy"
+                                class="form-icon" />
+
+                            <input type="text" class="form-control" placeholder="Name" />
+                        </div>
+
+                        <div class="form-group">
+                            <img src="assets/images/icons/mail-outline.svg" alt="email icon" loading="lazy"
+                                class="form-icon" />
+
+                            <input type="text" class="form-control" placeholder="Email" />
+                        </div>
+
+                        <div class="form-group">
+                            <img src="assets/images/icons/briefcase.svg" alt="Jop Title" loading="lazy"
+                                class="form-icon" />
+
+                            <input type="text" class="form-control" placeholder="Jop Title" />
+                        </div>
+
+                        <div class="form-group">
+                            <img src="assets/images/icons/call-outline.svg" alt="Phone Number" loading="lazy"
+                                class="form-icon" />
+
+                            <input type="text" class="form-control" placeholder="Phone Number" />
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-btn">
+                                Send
+                                <img src="assets/images/icons/send.svg" alt="send icon" loading="lazy"
+                                    class="form-icon" />
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-contain">
+                <p class="footer-info">
+                    Developed by Abdallah Salah
+                </p>
+
+                <p class="copy-right-info">
+                    &copy; 2022 - Abdallah
+                </p>
+
+                <ul class="footer-icons">
+                    <li>
+                        <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/icons/logo-github.svg" alt="github link" loading="lazy" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/icons/logo-linkedin.svg" alt="linkedin link" loading="lazy" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/icons/logo-twitter.svg" alt="twitter link" loading="lazy" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/images/icons/logo-facebook.svg" alt="facebook link" loading="lazy" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
