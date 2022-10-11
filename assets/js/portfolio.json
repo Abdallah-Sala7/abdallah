@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "store",
+    "github":"https://github.com/Abdallah-Sala7/store",
+    "demo":"https://abdallah-sala7.github.io/store/",
+    "description": "A simple store website",
+    "image": "assets/images/store.png",
+    "tags": ["react", "tailwind", "redux"],
+    "cat" : "web-site"
+  },
+  {
+    "id": 2,
+    "name": "book",
+    "github":"https://github.com/Abdallah-Sala7/book",
+    "demo":"https://abdallah-sala7.github.io/book/",
+    "description": "A simple store website",
+    "image": "assets/images/book.png",
+    "tags": ["html", "css", "js"],
+    "cat" : "android"
+  },
+  {
+    "id": 3,
+    "name": "hilton",
+    "github":"https://github.com/Abdallah-Sala7/hilton",
+    "demo":"https://abdallah-sala7.github.io/hilton/",
+    "description": "A simple store website",
+    "image": "assets/images/hilton.png",
+    "tags": ["html", "tailwind", "js"],
+    "cat" : "web-site"
+  },
+  {
+    "id": 4,
+    "name": "food",
+    "github":"https://github.com/Abdallah-Sala7/food",
+    "demo":"https://abdallah-sala7.github.io/food/",
+    "description": "A simple store website",
+    "image": "assets/images/food.png",
+    "tags": ["html", "css", "js"],
+    "cat" : "web-site"
+  }
+]

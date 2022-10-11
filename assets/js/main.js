@@ -1,11 +1,11 @@
-const navsBtn = document.querySelectorAll('nav ul li');
+const navsBtn = document.querySelectorAll('.nav-item');
 const nav = document.querySelector('nav');
 
 // add event listener to navs
 
 navsBtn.forEach(navs =>{
     navs.addEventListener('click', ()=>{
-      document.querySelector('nav ul li.active').classList.remove('active');
+      document.querySelector('.nav-item.active').classList.remove('active');
       navs.classList.add('active');
 
       let target = navs.dataset.target;
@@ -52,7 +52,7 @@ document.addEventListener('scroll', ()=>{
 
 // type writer effect
 const textDisplay = document.querySelector('.span-skils')
-const phrases = ['frontend developer', 'android developer', 'reactjs developer.']
+const phrases = ['frontend developer', 'android developer', 'reactjs developer']
 let i = 0
 let j = 0 
 let currentPhrase = []
@@ -99,24 +99,63 @@ function loop () {
 
 loop()
 
+// // add project to portfolio from json file
 
-// filter projects
+const portfolio = document.querySelector('.projects-info');
 const filterBtn = document.querySelectorAll('.filter-btn button');
+
+
+fetch('assets/js/portfolio.json')
+.then((response) => response.json())
+.then((data) => {
+  data.forEach((project) => {
+    portfolio.innerHTML +=`
+      <div class="project-item ${project.cat}">
+        <img 
+          src="assets/images/hilton.webp" 
+          alt="${project.title}" 
+          loading="lazy" 
+          class="project-img" 
+        />
+
+        <div class="projects-link">
+            <a href="${project.demo}">
+                <img 
+                  src="assets/images/icons/link-solid.svg" 
+                  alt="project demo link" 
+                  loading="lazy" 
+                />
+            </a>
+
+            <a href="${project.github}">
+                <img 
+                  src="assets/images/icons/code-slash.svg" 
+                  alt="project code in github link"
+                  loading="lazy" 
+                />
+            </a>
+        </div>
+      </div> `
+  })
+});
+
 const projects = document.querySelectorAll('.project-item');
 
 filterBtn.forEach(e=>{
-    e.addEventListener('click', ()=>{
-        filterBtn.forEach(e=>{
-            e.classList.remove('active');
-        })
-        e.classList.add('active');
-
-        let filter = e.dataset.filter;
-        projects.forEach(e=>{
-            e.classList.remove('hide');
-            if(!e.classList.contains(filter) && filter != 'all'){
-                e.classList.add('hide');
-            }
-        })
+  e.addEventListener('click', ()=>{
+    filterBtn.forEach(e=>{
+      e.classList.remove('active');
     })
+    e.classList.add('active');
+
+    filter = e.dataset.filter;
+    projects.forEach(e=>{
+      e.classList.remove('hide');
+      if(!e.classList.contains(filter) && filter != 'all'){
+        e.style.display = "none";
+      }else{
+        e.style.display = "block";
+      }
+    })
+  })
 })

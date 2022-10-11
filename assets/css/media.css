@@ -1,0 +1,124 @@
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container{padding: 0; max-width: 540px;}
+
+  nav{width: 500px;}
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .container{max-width: 720px;}
+
+  section .section-title{font-size: 3.5rem;}
+
+  /* *************************** */
+
+  nav ul li{width: 70px; height: 70px;}
+  nav ul li a img{width: 40px; height: 40px; }
+
+  /* header{padding: 145px 0;} */
+
+  .header-contain{flex-direction: row; justify-content: space-between;}
+
+  .header-contain .landing-img{width: 300px; height: 300px; margin-bottom: 0;}
+
+  .header-contain .landing-info{width: 400px;}
+
+  .header-contain .landing-info h1{font-size: 2rem;}
+  
+  .header-contain .landing-info h1 span{font-size: 2.5rem;}
+
+  .header-contain .landing-info .download-cv{width: 200px; margin: 0; font-size: 1.2rem;}
+
+  .header-contain .landing-info .download-cv img{width: 30px; height: 30px;}
+
+  /* ******************************** */
+
+  .about-info .about-subtitle{font-size: 2rem;}
+
+  .about-info .personal-info{ justify-content: space-between;}
+
+  .about-info .personal-info p{width: 50%; font-size: 1.2rem; margin-bottom: 0;}
+
+  .about-info .personal-info img{width: 300px; height: 300px;}
+
+  /* ********************************* */
+
+  .projects .project-item{width: 45%;}
+
+  /* ******************************************** */
+
+  .contact-contain::before{
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      height: auto;
+      right: 65%;
+      left: auto;
+      background-color: var(--secondary-light);
+  }
+
+  .contact-contain::after{top: 50%; right: calc(65% - 1em);}
+
+  .contact-contain .contact-social{width: 30%; margin-bottom: 0;}
+
+  .contact-contain .contact-social .social-title{font-size: 2rem;}
+
+  .contact-contain .contact-social .social-info{font-size: 1rem;}
+
+  .contact-contain .form-contain{width: 60%;}
+
+  .contact-contain .form-contain .form-group:not(:nth-last-of-type(2)){width: 48%;}
+
+  /* *********************************************** */
+
+  footer .footer-contain p{font-size: 1rem;}
+
+  footer .footer-contain .footer-icons{width: 250px;}
+
+  footer .footer-contain .footer-icons li{width: 20px; height: 20px;}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .container{max-width: 960px;}
+
+  section .section-title{font-size: 4rem;}
+
+  /* ******************************** */
+
+  .header-contain .landing-img{width: 350px; height: 350px;}
+
+  .header-contain .landing-info{width: 450px;}
+
+  .header-contain .landing-info h1{font-size: 2.5rem; text-align: left;}
+  
+  .header-contain .landing-info h1 span{font-size: 3rem; margin: 0;}
+
+  .header-contain .landing-info .download-cv{width: 250px; font-size: 1.5rem;}
+
+  /* ************************************************* */
+
+  .about-info .personal-info p{font-size: 1.5rem;}
+
+  /* ************************************* */
+
+  .projects .project-item{width: 30%;}
+
+  /* ********************************************** */
+
+  .contact-contain .contact-social .social-title{font-size: 3rem;}
+
+  .contact-contain .contact-social .social-icons a{width: 50px; height: 50px;}
+
+  .contact-contain .contact-social .social-icons a img{width: 30px; height: 30px;}
+
+  .contact-contain .contact-social .social-icons a:not(:last-of-type){margin-right: 1.5em;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .container{max-width: 1140px;}
+}
