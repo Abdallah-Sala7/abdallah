@@ -7,7 +7,7 @@
     "description": "A simple store website",
     "image": "assets/images/store.png",
     "tags": ["react", "tailwind", "redux"],
-    "cat" : "web-site"
+    "cat" : "web-app"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "description": "A simple store website",
     "image": "assets/images/book.png",
     "tags": ["html", "css", "js"],
-    "cat" : "android"
+    "cat" : "web-site"
   },
   {
     "id": 3,

@@ -99,63 +99,67 @@ function loop () {
 
 loop()
 
-// // add project to portfolio from json file
+// add project to portfolio and filter it
 
 const portfolio = document.querySelector('.projects-info');
 const filterBtn = document.querySelectorAll('.filter-btn button');
-
 
 fetch('assets/js/portfolio.json')
 .then((response) => response.json())
 .then((data) => {
   data.forEach((project) => {
-    portfolio.innerHTML +=`
-      <div class="project-item ${project.cat}">
-        <img 
-          src="assets/images/hilton.webp" 
-          alt="${project.title}" 
-          loading="lazy" 
-          class="project-img" 
-        />
+    const projectItem = document.createElement('div');
+    projectItem.classList.add(`project-item`);
+    projectItem.classList.add(`${project.cat}`);
 
-        <div class="projects-link">
-            <a href="${project.demo}">
-                <img 
-                  src="assets/images/icons/link-solid.svg" 
-                  alt="project demo link" 
-                  loading="lazy" 
-                />
-            </a>
+    projectItem.innerHTML =`
+      <img 
+        src="assets/images/hilton.webp" 
+        alt="${project.title}" 
+        loading="lazy" 
+        class="project-img" 
+      />
 
-            <a href="${project.github}">
-                <img 
-                  src="assets/images/icons/code-slash.svg" 
-                  alt="project code in github link"
-                  loading="lazy" 
-                />
-            </a>
-        </div>
+      <div class="projects-link">
+        <a href="${project.demo}">
+            <img 
+              src="assets/images/icons/link-solid.svg" 
+              alt="project demo link" 
+              loading="lazy" 
+            />
+        </a>
+
+        <a href="${project.github}">
+            <img 
+              src="assets/images/icons/code-slash.svg" 
+              alt="project code in github link"
+              loading="lazy" 
+            />
+        </a>
       </div> `
+
+    portfolio.appendChild(projectItem);
   })
 });
 
-const projects = document.querySelectorAll('.project-item');
+filterBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+    const projectItem = document.querySelectorAll('.project-item');
 
-filterBtn.forEach(e=>{
-  e.addEventListener('click', ()=>{
-    filterBtn.forEach(e=>{
-      e.classList.remove('active');
-    })
-    e.classList.add('active');
+    btn.parentElement.querySelector('.active').classList.remove('active');
+    btn.classList.add('active');
 
-    filter = e.dataset.filter;
-    projects.forEach(e=>{
-      e.classList.remove('hide');
-      if(!e.classList.contains(filter) && filter != 'all'){
-        e.style.display = "none";
-      }else{
-        e.style.display = "block";
+    projectItem.forEach((item) => {
+      if (filter === 'all') {
+        item.style.display = 'block';
+      } else {
+        if (item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
       }
-    })
-  })
-})
+    });
+  });
+});

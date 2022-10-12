@@ -45,7 +45,9 @@
 
   /* ********************************* */
 
-  .projects .project-item{width: 45%;}
+  .projects .projects-info{
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   /* ******************************************** */
 
@@ -104,8 +106,7 @@
   .about-info .personal-info p{font-size: 1.5rem;}
 
   /* ************************************* */
-
-  .projects .project-item{width: 30%;}
+  .projects .projects-info{grid-template-columns: repeat(3, 1fr);}
 
   /* ********************************************** */
 
