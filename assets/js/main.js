@@ -1,27 +1,14 @@
-const navsBtn = document.querySelectorAll('.nav-item');
-const nav = document.querySelector('nav');
+// loading page
 
-// add event listener to navs
-
-navsBtn.forEach(navs =>{
-    navs.addEventListener('click', ()=>{
-      document.querySelector('.nav-item.active').classList.remove('active');
-      navs.classList.add('active');
-
-      let target = navs.dataset.target;
-  
-      const pages = document.querySelectorAll('.page');
-      pages.forEach(page =>{
-        if(page.classList.contains(target)){
-          page.scrollIntoView({behavior: 'smooth'});
-        }
-      })
-    })
+const preloader = document.querySelector('.loading')
+window.addEventListener('load', function () {
+  preloader.style.display = 'none';
+  document.body.style.overflow = 'auto';
 })
-
 
 // auto nav hide on scroll
 
+const nav = document.querySelector('nav');
 let isStuk, ticking = false;
 let scrollPosition = window.scrollY ;
 
@@ -47,8 +34,6 @@ document.addEventListener('scroll', ()=>{
     ticking = true;
   }
 });
-
-
 
 // type writer effect
 const textDisplay = document.querySelector('.span-skils')
@@ -114,7 +99,7 @@ fetch('assets/js/portfolio.json')
 
     projectItem.innerHTML =`
       <img 
-        src="assets/images/hilton.webp" 
+        src="${project.image}" 
         alt="${project.title}" 
         loading="lazy" 
         class="project-img" 
@@ -162,4 +147,31 @@ filterBtn.forEach((btn) => {
       }
     });
   });
+});
+
+// send email
+
+const formContint = document.querySelector('.form-contain');
+
+formContint.addEventListener('submit', (e) => {
+  emailjs.send("service_oekycvj","template_yuv5jpc",{
+    from_name: document.getElementById('fromName').value,
+    from_email: document.getElementById('fromEmail').value,
+    from_jop: document.getElementById('fromJop').value,
+    from_mobile: document.getElementById('fromMobile').value,
+    message: document.getElementById('message').value,
+  }).then(
+    function() {
+      document.getElementById('fromName').value = '';
+      document.getElementById('fromEmail').value = '';
+      document.getElementById('fromJop').value = '';
+      document.getElementById('message').value = '';
+      document.getElementById('fromMobile').value = '';
+      alert('Your message has been sent successfully');
+    },
+    function(error) {
+      console.log("FAILED", error);
+    }
+  )
+  e.preventDefault();
 });
