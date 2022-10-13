@@ -117,6 +117,9 @@ nav .nav-bar{
 nav .nav-bar .nav-item{
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* li tooltip */
