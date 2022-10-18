@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "store",
-    "github":"https://store-cis.netlify.app/",
-    "demo":"https://abdallah-sala7.github.io/store/",
+    "github":"https://abdallah-sala7/store/",
+    "demo":"https://store-cis.netlify.app/",
     "description": "A simple store website",
     "image": "assets/images/projects/store.webp",
     "tags": ["react", "tailwind", "redux"],
