@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "store",
-    "github":"https://github.com/Abdallah-Sala7/store",
+    "github":"https://store-cis.netlify.app/",
     "demo":"https://abdallah-sala7.github.io/store/",
     "description": "A simple store website",
     "image": "assets/images/projects/store.webp",
