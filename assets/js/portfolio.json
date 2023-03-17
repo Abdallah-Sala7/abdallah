@@ -1,8 +1,18 @@
 [
   {
+    "id": 0,
+    "name": "courses",
+    "github":"https://github.com/Abdallah-Sala7/courses",
+    "demo":"https://courses-abdallah-sala7.vercel.app/",
+    "description": "A simple courses website",
+    "image": "assets/images/projects/courses.webp",
+    "tags": ["react", "css", "redux", "auth api", "material-ui", "rtk query"],
+    "cat" : "web-app"
+  },
+  {
     "id": 1,
     "name": "store",
-    "github":"https://abdallah-sala7/store/",
+    "github":"https://github.com/abdallah-sala7/store/",
     "demo":"https://store-cis.netlify.app/",
     "description": "A simple store website",
     "image": "assets/images/projects/store.webp",

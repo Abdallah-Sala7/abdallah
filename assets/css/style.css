@@ -289,8 +289,7 @@ header{
 }
 
 .about-info .personal-info img{
-    width: 200px;
-    height: 200px;
+    width: 90%;
     object-fit: contain;
 }
 
